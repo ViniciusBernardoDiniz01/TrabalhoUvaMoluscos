@@ -28,7 +28,7 @@ function shuffleArray(array) {
 // Função para selecionar e limitar o número de perguntas
 function maxima(questions) {
     const shuffledQuestions = shuffleArray(questions);
-    return shuffledQuestions.slice(0, 6); // Agora são 6 perguntas
+    return shuffledQuestions.slice(0, 5); // Agora são 6 perguntas
 }
 
 // Inicializa o conjunto de perguntas limitadas
@@ -75,6 +75,16 @@ function nextQuestion(e) {
     allButtons.forEach(btn => btn.disabled = true);
 
     if (correct) {
+        questionCorrects++;
+    } else {
+        errors++;
+        if (errors <= 1) {
+            const newQuestions = shuffleArray(question).slice(0, 1);
+            limitedQuestions = [...limitedQuestions, ...newQuestions];
+        }
+    }
+
+    if (correct) {
         e.target.classList.add("correct");
         questionCorrects++;
     } else {
@@ -94,8 +104,42 @@ function nextQuestion(e) {
 
     moveSnail(correct);
 
-    // Aguarda 1 segundo antes de ir para a próxima pergunta
-    setTimeout(() => {
+    // Cria ou seleciona o parágrafo de explicação
+    let explanationDiv = document.getElementById("explanation-div");
+    if (!explanationDiv) {
+        explanationDiv = document.createElement("div");
+        explanationDiv.id = "explanation-div";
+        explanationDiv.style.marginTop = "16px";
+        explanationDiv.style.background = "#e3f7e8";
+        explanationDiv.style.borderLeft = "5px solid #00b894";
+        explanationDiv.style.padding = "12px";
+        explanationDiv.style.borderRadius = "8px";
+        explanationDiv.style.color = "#222";
+        explanationDiv.style.fontSize = "1.1rem";
+        explanationDiv.style.display = "flex";
+        explanationDiv.style.alignItems = "center";
+        explanationDiv.style.justifyContent = "space-between";
+        answers.parentNode.insertBefore(explanationDiv, answers.nextSibling);
+    }
+
+    const item = limitedQuestions[questionAtual];
+    explanationDiv.innerHTML = `
+        <span>${item.explanation ? item.explanation : "Sem explicação disponível."}</span>
+        <button id="ok-explanation-btn" style="
+            margin-left: 16px;
+            background: #008CCC;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+        ">OK</button>
+    `;
+    explanationDiv.style.display = "flex";
+
+    document.getElementById("ok-explanation-btn").onclick = () => {
+        explanationDiv.style.display = "none";
         if (questionAtual < limitedQuestions.length - 1) {
             questionAtual++;
             loadQuestion();
@@ -106,7 +150,7 @@ function nextQuestion(e) {
                 finish(false);
             }
         }
-    }, 1000);
+    };
 }
 
 // Função para carregar a pergunta atual
