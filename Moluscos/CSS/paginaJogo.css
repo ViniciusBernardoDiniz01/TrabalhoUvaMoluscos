@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none
+}
+
+footer {
+    background-color: #0027A4;
+    height: 50px;
+    width: 100%;
+}
+
+header a {
+    color: white
+}
+/* Fonte padrão */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 90px;
+    width: 100%;
+    background-color: #0027A4;
+    padding: 0 20px;
+}
+
+.voltar {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 5px;
+    height: 30px;
+    width: 120px;
+    cursor: pointer;
+}
+
+header a:hover {
+background-color: #a32323;
+}
+
+.gambiarra {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left,
+.right {
+    height: 100vh;
+    width: 20%;
+    background: linear-gradient(135deg,
+            #011868 0%,
+            #011463 15%,
+            #00115f 30%,
+            #010d59 45%,
+            #002375 60%,
+            #00338c 75%,
+            #013e99 90%,
+            #0046a5 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    height: 100vh; 
+    width: 80%;
+}
+
+.container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo {
+    position: absolute; /* Usa position para centralizar */
+    left: 50%; /* Move para 50% da largura do contêiner */
+    top: 62.5%; /* Move para 50% da altura do contêiner */
+    transform: translate(-50%, -50%); /* Centraliza exatamente no meio */
+    width: 900px;
+    padding: 20px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.track {
+    width: 800px; /* Largura fixa da pista */
+    height: 150px; /* Altura fixa da pista */
+    background-image: url(../IMG/Pista.png);
+    border-radius: 15px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    position: relative;
+    flex-shrink: 0; /* Garante que a pista não seja redimensionada */
+    padding: 20px;
+}
+
+
+.snail {
+    position: relative;
+    width: 120px;
+    height: 100%;
+    transition: transform 0.5s ease;
+    background-size: contain;
+    z-index: 10;
+}
+
+.finish-line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: red;
+}
+
+.qntd {
+    text-align: end;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}	
+
+.answers button {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #008CCC;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.answers button:hover {
+    background-color: #005F99;
+}
+
+.finish {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+.finish button {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #008CCC;
+    color: white;
+    transition: background-color 0.3s ease;
+}

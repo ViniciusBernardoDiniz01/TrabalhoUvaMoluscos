@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.track {
+  width: 100%;
+  max-width: 800px; /* Largura da pista */
+  height: 100px; /* Altura da pista */
+  background-color: #f0f0f0;
+  border-radius: 15px; /* Suaviza os cantos da pista */
+  margin: 20px 0; /* Espaçamento acima e abaixo da pista */
+  position: relative;
+}
+
+.snail {
+  position: relative;
+  width: 120px; /* Tamanho do caracol */
+  height: 120px;
+  transition: transform 0.5s ease; /* Suaviza o movimento */
+  background: url('snail.png') no-repeat center;
+  background-size: contain;
+  z-index: 10; /* Dá destaque ao caracol */
+  margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+.finish-line {
+  position: absolute;
+  right: 0;
+  width: 10px; /* Largura da linha de chegada */
+  height: 100%;
+  background: red;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px; /* Espaçamento entre os elementos */
+  align-items: center;
+}
+
+.qntd {
+  text-align: end;
+  font-size: 1.5rem; /* Tamanho do texto */
+}
+
+.question {
+  font-size: 1.8rem; /* Tamanho da pergunta */
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento abaixo da pergunta */
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os botões */
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  padding: 20px; /* Tamanho do botão */
+  font-size: 1.5rem; /* Tamanho do texto do botão */
+  border: none;
+  border-radius: 15px; /* Suaviza os cantos do botão */
+  cursor: pointer;
+  background-color: #008CCC;
+  color: white;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+  background-color: #005F99; /* Cor ao passar o mouse */
+}
+
+.finish {
+  display: none;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os elementos */
+  font-size: 1.8rem;
+}
+
+.finish button {
+  text-align: center;
+  padding: 20px; /* Tamanho do botão de reinício */
+  font-size: 1.5rem; /* Tamanho do texto do botão */
+}
+
+
+
+
+
