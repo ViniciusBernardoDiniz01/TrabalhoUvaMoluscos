@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Caracol</title>
+    <link rel="stylesheet" href="./CSS/paginaJogo.css">
+    <link rel="stylesheet" href="./CSS/modal.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div><a href="./personage.html" class="voltar">VOLTAR</a></div>
+        <div>
+            <button class="btnOpenModal" onclick="openModal()">☰</button>
+        </div>
+    </header>
+
+    <!-- Estrutura principal -->
+    <div class="gambiarra">
+        <!-- Barra lateral esquerda -->
+        <nav class="left"></nav>
+
+        <div class="body-config">
+            <div class="modal-container">
+                <div class="modal">
+                    <div class="btns">
+                        <button class="btn1" onclick="closeModal()">Continuar</button>
+                        <a href="./personage.html" type="button" class="link1">Trocar Personagem</a>
+                        <a href="./Creditos.html" class="link2" type="button">Creditos</a>
+                        <a href="index.html" class="link3" type="button">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <!-- Conteúdo principal -->
+        <div class="container">
+            <div class="conteudo">
+                <h2>Quiz do Caracol</h2>
+                <main>
+                    <!-- Quantidade de perguntas -->
+                    <div class="qntd">
+                        Pergunta <span id="indicePergunta">1</span> de <span id="totalPerguntas">4</span>
+                    </div>
+
+                    <!-- Pista e caracol -->
+                    <div class="track">
+                        <img src="./IMG/descolado.png" alt="Caracol" class="snail">
+                        <div class="finish-line"></div>
+                    </div>
+
+                    <!-- Pergunta e respostas -->
+                    <div class="content">
+                        <div class="question" id="pergunta">Qual é a capital da França?</div>
+                        <div class="answers" id="cards-container">
+                            <button>Paris</button>
+                            <button>Londres</button>
+                            <button>Berlim</button>
+                            <button>Roma</button>
+                        </div>
+                    </div>
+
+                    <!-- Mensagem de finalização -->
+                    <div class="finish" id="finish">
+                        <span>Parabéns! Você completou o jogo!</span>
+                        <button onclick="reiniciarJogo()">Reiniciar</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Barra lateral direita -->
+        <aside class="right"></aside>
+    </div>
+
+    <!-- Rodapé -->
+    <footer></footer>
+
+    <!-- Script -->
+    <script type="module" src="./JS/verificacao.js"></script>
+    <script src="./JS/modal.js"></script>
+</body>
+
+</html>
