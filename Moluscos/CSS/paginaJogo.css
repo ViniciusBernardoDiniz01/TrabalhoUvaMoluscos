@@ -105,9 +105,9 @@ main {
 }
 
 .track {
-    width: 800px; /* Largura fixa da pista */
+    width: 900px; /* Largura fixa da pista */
     height: 150px; /* Altura fixa da pista */
-    background-image: url(../IMG/Pista.png);
+    background-image: url(../IMG/pista.png);
     border-radius: 15px;
     margin: 20px auto; /* Centraliza horizontalmente */
     position: relative;
@@ -123,15 +123,6 @@ main {
     transition: transform 0.5s ease;
     background-size: contain;
     z-index: 10;
-}
-
-.finish-line {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 10px;
-    height: 100%;
-    background: red;
 }
 
 .qntd {
