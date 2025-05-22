@@ -69,13 +69,24 @@ function moveSnail(correct) {
 // Função chamada ao responder uma pergunta
 function nextQuestion(e) {
     const correct = e.target.getAttribute("data-correct") === "true";
+    const allButtons = document.querySelectorAll(".answer");
+
+    // Desabilita todos os botões
+    allButtons.forEach(btn => btn.disabled = true);
 
     if (correct) {
+        e.target.classList.add("correct");
         questionCorrects++;
     } else {
+        e.target.classList.add("incorrect");
         errors++;
-        if (errors <= 2) {
-            // Adiciona mais uma pergunta ao conjunto se o limite de erros for atingido
+        // Destaca a resposta correta
+        allButtons.forEach(btn => {
+            if (btn.getAttribute("data-correct") === "true") {
+                btn.classList.add("correct");
+            }
+        });
+        if (errors <= 1) {
             const newQuestions = shuffleArray(question).slice(0, 1);
             limitedQuestions = [...limitedQuestions, ...newQuestions];
         }
@@ -83,17 +94,19 @@ function nextQuestion(e) {
 
     moveSnail(correct);
 
-    if (questionAtual < limitedQuestions.length - 1) {
-        questionAtual++;
-        loadQuestion();
-    } else {
-        // Finaliza o jogo ao terminar as perguntas
-        if (snailPosition >= maxSnailPosition) {
-            finish(true);
+    // Aguarda 1 segundo antes de ir para a próxima pergunta
+    setTimeout(() => {
+        if (questionAtual < limitedQuestions.length - 1) {
+            questionAtual++;
+            loadQuestion();
         } else {
-            finish(false);
+            if (snailPosition >= maxSnailPosition) {
+                finish(true);
+            } else {
+                finish(false);
+            }
         }
-    }
+    }, 1000);
 }
 
 // Função para carregar a pergunta atual

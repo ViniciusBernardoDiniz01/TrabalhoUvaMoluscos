@@ -14,6 +14,7 @@ footer {
 header a {
     color: white
 }
+
 /* Fonte padrão */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -48,7 +49,7 @@ header {
 }
 
 header a:hover {
-background-color: #a32323;
+    background-color: #a32323;
 }
 
 .gambiarra {
@@ -82,21 +83,25 @@ main {
     align-items: center;
     background-color: #ffffff;
     color: black;
-    height: 100vh; 
+    height: 100vh;
     width: 80%;
 }
 
-.container > div {
+.container>div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .conteudo {
-    position: absolute; /* Usa position para centralizar */
-    left: 50%; /* Move para 50% da largura do contêiner */
-    top: 62.5%; /* Move para 50% da altura do contêiner */
-    transform: translate(-50%, -50%); /* Centraliza exatamente no meio */
+    position: absolute;
+    /* Usa position para centralizar */
+    left: 50%;
+    /* Move para 50% da largura do contêiner */
+    top: 62.5%;
+    /* Move para 50% da altura do contêiner */
+    transform: translate(-50%, -50%);
+    /* Centraliza exatamente no meio */
     width: 900px;
     padding: 20px;
     background-color: #d9d9d9;
@@ -104,14 +109,30 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+button.correct {
+    background-color: #00b894 !important;
+    border: 2px solid #499687 !important;
+    color: #fff !important;
+}
+
+button.incorrect {
+    background-color: #e17055 !important;
+    border: 2px solid #c0392b !important;
+    color: #fff !important;
+}
+
 .track {
-    width: 900px; /* Largura fixa da pista */
-    height: 150px; /* Altura fixa da pista */
+    width: 900px;
+    /* Largura fixa da pista */
+    height: 150px;
+    /* Altura fixa da pista */
     background-image: url(../IMG/pista.png);
     border-radius: 15px;
-    margin: 20px auto; /* Centraliza horizontalmente */
+    margin: 20px auto;
+    /* Centraliza horizontalmente */
     position: relative;
-    flex-shrink: 0; /* Garante que a pista não seja redimensionada */
+    flex-shrink: 0;
+    /* Garante que a pista não seja redimensionada */
     padding: 20px;
 }
 
@@ -149,7 +170,7 @@ main {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-}	
+}
 
 .answers button {
     width: 100%;
