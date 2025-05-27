@@ -67,6 +67,8 @@ function moveSnail(correct) {
 }
 
 // Função chamada ao responder uma pergunta
+
+
 function nextQuestion(e) {
     const correct = e.target.getAttribute("data-correct") === "true";
     const allButtons = document.querySelectorAll(".answer");
@@ -74,28 +76,22 @@ function nextQuestion(e) {
     // Desabilita todos os botões
     allButtons.forEach(btn => btn.disabled = true);
 
-    if (correct) {
-        questionCorrects++;
-    } else {
-        errors++;
-        if (errors <= 1) {
-            const newQuestions = shuffleArray(question).slice(0, 1);
-            limitedQuestions = [...limitedQuestions, ...newQuestions];
-        }
-    }
-
+    // Marca visualmente a resposta
     if (correct) {
         e.target.classList.add("correct");
-        questionCorrects++;
     } else {
         e.target.classList.add("incorrect");
-        errors++;
         // Destaca a resposta correta
         allButtons.forEach(btn => {
             if (btn.getAttribute("data-correct") === "true") {
                 btn.classList.add("correct");
             }
         });
+    }
+
+    // Adiciona perguntas extras se necessário
+    if (!correct) {
+        errors++;
         if (errors <= 1) {
             const newQuestions = shuffleArray(question).slice(0, 1);
             limitedQuestions = [...limitedQuestions, ...newQuestions];
@@ -139,6 +135,10 @@ function nextQuestion(e) {
     explanationDiv.style.display = "flex";
 
     document.getElementById("ok-explanation-btn").onclick = () => {
+        // Só soma o ponto aqui, após o OK
+        if (correct) {
+            questionCorrects++;
+        }
         explanationDiv.style.display = "none";
         if (questionAtual < limitedQuestions.length - 1) {
             questionAtual++;
