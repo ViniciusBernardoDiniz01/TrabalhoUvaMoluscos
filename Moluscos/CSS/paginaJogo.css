@@ -65,7 +65,7 @@ main {
 .left,
 .right {
     height: 100vh;
-    width: 15%;
+    width: 25%;
     background: linear-gradient(135deg,
             #011868 0%,
             #011463 15%,
