@@ -29,7 +29,7 @@
 
 .img {
     width: 100%;
-    height: 450px;
+    height: 325px;
 }
 
 header:hover {
@@ -41,8 +41,8 @@ header:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    padding-top: 25px;
+    padding: 10px;
+    padding-top: 15px;
     gap: 20px;
     font-size: 2.2em;
     row-gap: 5px;

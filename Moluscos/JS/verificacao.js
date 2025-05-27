@@ -109,7 +109,7 @@ function nextQuestion(e) {
     if (!explanationDiv) {
         explanationDiv = document.createElement("div");
         explanationDiv.id = "explanation-div";
-        explanationDiv.style.marginTop = "16px";
+        explanationDiv.style.marginTop = "10px";
         explanationDiv.style.background = "#e3f7e8";
         explanationDiv.style.borderLeft = "5px solid #00b894";
         explanationDiv.style.padding = "12px";
