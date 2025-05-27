@@ -7,14 +7,19 @@
 }
 
 .btnOpenModal {
-    font-size: x-large;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(70, 43, 226);
+    background-color: #0027A4;
     color: white;
     cursor: pointer;
     z-index: 10; /* Garante que o botão fique acima do conteúdo */
+}
+.btnOpenModal:hover {
+    opacity: 0.8;
 }
 
 .modal-container {
