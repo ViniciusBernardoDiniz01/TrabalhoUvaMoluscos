@@ -93,7 +93,7 @@ function nextQuestion(e) {
     if (!correct) {
         errors++;
         if (errors <= 1) {
-            const newQuestions = shuffleArray(question).slice(0, 1);
+            const newQuestions = shuffleArray(question).slice(0, 2);
             limitedQuestions = [...limitedQuestions, ...newQuestions];
         }
     }

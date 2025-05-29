@@ -10,6 +10,7 @@
     font-family: 'Post No Bills Colombo', sans-serif;
     overflow-x: hidden;
     scrollbar-width: none;
+
 }
 
 .geral {
@@ -73,6 +74,28 @@ header:hover {
 
 .start:hover {
     scale: 1.05;
+}
+
+@media (height: 1080px) {
+    .logo {
+        font: 80px sans-serif;
+    }
+
+    .img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .titulo {
+        font-size: 2.5em;
+        margin-top: 50px;
+    }
+
+    .start {
+        font-size: 3em;
+        padding: 10px;
+    }
+    
 }
 
 

@@ -126,12 +126,14 @@ button.incorrect {
     /* Altura fixa da pista */
     background-image: url(../IMG/pista.png);
     border-radius: 15px;
+
     margin: 20px auto;
     /* Centraliza horizontalmente */
     position: relative;
     flex-shrink: 0;
     /* Garante que a pista não seja redimensionada */
     padding: 20px;
+    
 }
 
 
