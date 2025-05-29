@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 header{
+    position: center;
     color: #7bf4ffed;
     text-shadow: #7bf4ffed 0px 0px 10px;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 body{
@@ -37,6 +36,26 @@ p{
     gap: 100px;
 }
 
+.sair{
+    font-size: 5rem;
+    margin-left: 50px;
+}
+
+.sair a{
+    text-decoration: none;
+    color: #7bf4ffed;
+    text-shadow: #7bf4ffed 0px 0px 10px;
+}
+
+.sair a:hover{
+    color: #0515f6ed;
+    transition: 1s;
+}
+
+.sair:hover{
+    transition: 0.5s;
+    cursor: pointer;
+}
 .per1{
     padding: 20px;
     width: 280px;
