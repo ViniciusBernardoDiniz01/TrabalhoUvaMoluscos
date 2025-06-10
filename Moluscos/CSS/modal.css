@@ -8,8 +8,8 @@
 
 .btnOpenModal {
     font-size: 40px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    bottom: 3px; /* Ajusta a posição do botão */
     padding: 10px;
     border: none;
     border-radius: 5px;
