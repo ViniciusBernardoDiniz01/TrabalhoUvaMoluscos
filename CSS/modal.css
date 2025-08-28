@@ -1,0 +1,130 @@
+.body-config {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnOpenModal {
+    font-size: 40px;
+    position: relative;
+    bottom: 3px; /* Ajusta a posição do botão */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0027A4;
+    color: white;
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão fique acima do conteúdo */
+}
+.btnOpenModal:hover {
+    opacity: 0.8;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999; /* Sobrepõe todo o conteúdo */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 12, 33, 0.8); /* Fundo semitransparente */
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #0028a4;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 500px;
+    animation: modal 0.4s;
+}
+
+.active {
+    display: flex; /* Torna o modal visível */
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link1, .link2 {
+    color: rgb(0, 0, 0);
+
+}
+
+.link3 {
+    color: white;
+}
+
+.link1, .link2, .link3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    height: 100px;
+    font-size: x-large;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.btn1{
+    flex-direction: column;
+    width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    height: 100px;
+    font-size: x-large;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn1:hover, .link1:hover, .link2:hover, .link3:hover {
+    opacity: 0.8;
+}
+
+.link3 {
+    background-color: red;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .modal {
+        padding: 10px;
+        width: 80%;
+    }
+
+    span,
+    .btns {
+        font-size: smaller;
+    }
+}

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    position: center;
+    color: #7bf4ffed;
+    text-shadow: #7bf4ffed 0px 0px 10px;
+}
+
+body{
+    background-image: url(../img/fundo.jpg);
+    background-size: cover;
+}
+
+p{
+    margin: 20px;
+    color: #7bf4ffed;
+    text-shadow: #7bf4ffed 0px 0px 10px;
+    margin: 0px;
+
+}
+
+.Persona{
+    margin: 80px 50px 50px 50px;
+    justify-content: center;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 100px;
+}
+
+.sair{
+    font-size: 5rem;
+    margin-left: 50px;
+}
+
+.sair a{
+    text-decoration: none;
+    color: #7bf4ffed;
+    text-shadow: #7bf4ffed 0px 0px 10px;
+}
+
+.sair a:hover{
+    color: #0515f6ed;
+    transition: 1s;
+}
+
+.sair:hover{
+    transition: 0.5s;
+    cursor: pointer;
+}
+.per1{
+    padding: 20px;
+    width: 280px;
+    height: 300px;
+}
+
+
+
+.Nome:hover{
+    background-color:#213032;
+    transition: 0.8s;
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+.Nome{
+    color: white;
+    font-style: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-style: italic;
+    border: solid 5px #7bf4ffed;
+    box-shadow: 0px 0px 10px #7bf4ffed;
+    border-radius: 15px;
+    position: relative;
+}
